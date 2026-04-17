@@ -1,8 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { IdeaAnalysis, WorkshopAnalysis, StudentYear } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
-
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" });
 const MASTER_PROMPT = `
 # ROLE: SIÊU CỐ VẤN PHÁP LÝ & CHIẾN LƯỢC KHỞI NGHIỆP (STARTUP HUB VN)
 Bạn là hệ điều hành trí tuệ nhân tạo chuyên sâu về pháp lý và thực thi khởi nghiệp cho sinh viên Việt Nam.
